@@ -2,7 +2,7 @@
 
 Basilisk II nicely wrapped up in docker.
 
-There's `Dockerfile` for x86 and `Dockerfile.armhf` for ARM (eg, RaspberryPi's).
+There's `Dockerfile` for x86 and `Dockerfile.arm` for ARM (eg, RaspberryPi's).
 
 ## Pulling
 
@@ -13,7 +13,7 @@ $ docker pull benletchford/docker-basiliskii
 
 ### ARM
 ```bash
-$ docker pull benletchford/docker-basiliskii-armhf
+$ docker pull benletchford/docker-basiliskii-arm
 ```
 
 ## Example Usage
@@ -30,4 +30,4 @@ $ docker run \
   benletchford/docker-basiliskii
 ```
 
-*Use benletchford/docker-basiliskii-armhf if using ARM*
+*Use benletchford/docker-basiliskii-arm if using ARM*
