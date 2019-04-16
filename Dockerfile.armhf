@@ -7,9 +7,9 @@ RUN git clone https://github.com/cebix/macemu /opt/macemu
 WORKDIR /opt/macemu/BasiliskII/src/Unix
 RUN ./autogen.sh --enable-sdl-video --enable-sdl-audio --disable-vosf --disable-jit-compiler && make && make install
 
-RUN groupadd -r macpi -g 1000
-RUN useradd -r -u 1000 -g macpi macpi
+RUN groupadd -r basiliskii -g 1000
+RUN useradd -r -u 1000 -g basiliskii basiliskii
 
-USER macpi
+USER basiliskii
 
 ENTRYPOINT ["/usr/local/bin/BasiliskII"]
