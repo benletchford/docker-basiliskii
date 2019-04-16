@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM arm32v7/ubuntu:xenial
 
 RUN apt-get -y update
 RUN apt-get install -y git libsdl1.2-dev autoconf libgtk2.0-dev libxxf86dga-dev libxxf86vm-dev libesd0-dev xserver-xorg-core xserver-xorg-input-all xserver-xorg-video-fbdev pulseaudio pulseaudio-utils

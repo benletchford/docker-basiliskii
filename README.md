@@ -1,14 +1,22 @@
 # Basilisk II in Docker
 
-Basilisk II nicely wrapped up in docker. This uses an ARM base image.
+Basilisk II nicely wrapped up in docker.
 
-# Pulling
+There's `Dockerfile` for x86 and `Dockerfile.armhf` for ARM (eg, RaspberryPi's).
 
+## Pulling
+
+### x86
+```bash
+$ docker pull benletchford/docker-basiliskii
+```
+
+### ARM
 ```bash
 $ docker pull benletchford/docker-basiliskii-armhf
 ```
 
-# Example Usage
+## Example Usage
 
 ```bash
 $ docker run \
@@ -19,10 +27,7 @@ $ docker run \
   --device /dev/snd \
   --group-add $(getent group audio | cut -d: -f3) \ # Add container to host's audio group so it can use /dev/snd
   --net=host \
-  benletchford/docker-basiliskii-armhf
+  benletchford/docker-basiliskii
 ```
 
-# Building
-```bash
-$ docker build -t docker-basiliskii-armhf .
-```
+*Use benletchford/docker-basiliskii-armhf if using ARM*
