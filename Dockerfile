@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 
 RUN apt-get -y update
-RUN apt-get install -y git libsdl1.2-dev autoconf libgtk2.0-dev libxxf86dga-dev libxxf86vm-dev libesd0-dev xserver-xorg-core xserver-xorg-input-all xserver-xorg-video-fbdev pulseaudio pulseaudio-utils
+RUN apt-get install -y git libsdl1.2-dev autoconf libgtk2.0-dev libxxf86dga-dev libxxf86vm-dev libesd0-dev xserver-xorg-core xserver-xorg-input-all xserver-xorg-video-fbdev
 
 RUN git clone https://github.com/cebix/macemu /opt/macemu
 WORKDIR /opt/macemu/BasiliskII/src/Unix
